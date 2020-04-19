@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A simple, and minimalistic Home Page webpage.">
+    <meta name="keywords" content="Wallpaper,Simple,Minimalistic,Homepage,Time,Weather">
+    <meta name="author" content="Huzz - Huzz#2019 on Discord">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <title>Homepage+</title>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="moment.js"></script>
+    <script src="sugar.js"></script>
+    <script src="weather.js"></script>
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+  </head>
+
+  <body>
+    <div class="main-area" id="fade">
+      <div class="parallax">
+        <div class="time-piece">
+          <p id="time-text"></p>
+          <div class="second">
+            <div class="second-timer" id="second-timer">
+            </div>
+          </div>
+          <div class="minute">
+            <div class="minute-timer" id="minute-timer">
+            </div>
+          </div>
+          <div class="hour">
+            <div class="hour-timer" id="hour-timer">
+            </div>
+          </div>
+          <div class="day">
+            <div class="day-timer" id="day-timer">
+            </div>
+          </div>
+          <p id="time-date"></p>
+        </div>
+        <div class="weather">
+        </div>
+        <div class="middle">
+          <button class="btn" onclick="wpbefore()">
+            <label>
+              <i class="fab"><</i>
+            </label>
+          </button>
+          <span id="wpcurnum"></span>
+          <button class="btn" onclick="wpnext()">
+            <label>
+              <i class="fab">></i>
+            </label>
+          </button>
+        </div>
+        <div class="select-overlay">
+        </div>
+        <div class="credit">
+          <p>
+            Made by Huzz.<br>
+            If any issues arise, please contact <b>Huzz</b>#2019 on discord!
+          </p>
+        </div>
+      </div>
+      <div class="background" id="background"></div>
+    </div>
+    <div id="break" style="display: none;">
+      <span id="minuteDelay" style="color: red;"></span>
+      <span id="hourDelay" style="color: red;"></span>
+      <span id="dayDelay" style="color: red;"></span>
+      <span id="wpnum"></span>
+      <span id="wpweather"></span>
+    </div>
+  </body>
+</html>
