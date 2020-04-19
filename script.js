@@ -215,12 +215,10 @@ $(document).ready(function main(){
     }
     // ↑ ×
 
-    let imgId = Math.floor((Math.random() * 26) + 1);
-    let url = `myimages/${imgId}`;
+
+    let url = "https://media.discordapp.net/attachments/294771564115656704/701464268574556270/2.jpg";
     console.log("BACKGROUND IMAGE USED : " + url);
-    $(".background").css(`background-image`, `url("${url}.jpg")`);
-    document.getElementById("wpnum").style.datatext = imgId;
-    document.getElementById("wpcurnum").innerHTML = imgId;
+    $(".background").css(`background-image`, `url("${url}")`);
 
     let userCity = geoplugin_city();
     console.log("USER CITY DETECTED : " + userCity);
@@ -318,24 +316,7 @@ $(document).ready(function main(){
               document.getElementById("wpweather").style.datatext = "1";
             }
             console.log(currentCond);
-
-            // Light Rain
-
-            if (document.getElementById("wpweather").style.datatext == "test") {
-              let imgId = Math.floor((Math.random() * 26) + 1);
-              let url = `myimages/${imgId}`;
-              console.log("BACKGROUND IMAGE USED : " + url);
-              $(".background").css(`background-image`, `url("${url}.jpg")`);
-              document.getElementById("wpnum").style.datatext = imgId;
-              document.getElementById("wpcurnum").innerHTML = imgId;
-
-              let userCity = geoplugin_city();
-              console.log("USER CITY DETECTED : " + userCity);
-
-              let userCountry = geoplugin_countryName();
-              console.log("USER COUNTRY DETECTED : " + userCountry);
-            });
-            }
+        });
     };
     updateWeather();
     let weather = setInterval(function (){
